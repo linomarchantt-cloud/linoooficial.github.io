@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Para Vane ❤️</title>
+</head>
+
+<body style="background:black;color:white;text-align:center;font-family:sans-serif;">
+
+<h1>Hola Vane ❤️</h1>
+
+<p>Toca los corazones</p>
+
+<div id="mensaje" style="display:none;font-size:24px;color:pink;">
+Vieja gracias por todo ❤️
+</div>
+
+<script>
+
+let total=10
+let tocados=0
+
+for(let i=0;i<total;i++){
+
+let heart=document.createElement("div")
+heart.innerHTML="❤️"
+heart.style.position="absolute"
+heart.style.left=Math.random()*90+"vw"
+heart.style.top=Math.random()*90+"vh"
+heart.style.fontSize="30px"
+
+heart.onclick=function(){
+
+heart.remove()
+tocados++
+
+if(tocados==total){
+document.getElementById("mensaje").style.display="block"
+}
+
+}
+
+document.body.appendChild(heart)
+
+}
+
+</script>
+
+</body>
+</html>
