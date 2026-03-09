@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bienvenido al universo de Lino</title>
-<style>
-body{
-background:#0f172a;
-color:white;
-text-align:center;
-font-family:sans-serif;
-padding:40px;
-}
-
-h1{
-font-size:40px;
-}
-
-button{
-padding:15px 30px;
-font-size:20px;
-border:none;
-border-radius:10px;
-background:#9333ea;
-color:white;
-cursor:pointer;
-}
-
-button:hover{
-background:#7e22ce;
-}
-</style>
+<title>Para Vane ❤️</title>
 </head>
 
-<body>
+<body style="background:black;color:white;text-align:center;font-family:sans-serif;">
 
-<h1>Bienvenido al universo de Lino 🚀</h1>
+<h1>Hola Vane ❤️</h1>
+<p>Toca los corazones para ver tu sorpresa</p>
 
-<p>Proyectos web, juegos y detalles interactivos.</p>
-
-<button onclick="mensaje()">Toca aquí</button>
-
-<p id="secreto"></p>
+<div id="mensaje" style="display:none;font-size:24px;color:pink;">
+Vieja, gracias por todo ❤️ Te quiero mucho.
+</div>
 
 <script>
-function mensaje(){
-document.getElementById("secreto").innerHTML =
-"Si llegaste hasta aquí... se vienen proyectos increíbles.";
+
+let total=10
+let tocados=0
+
+for(let i=0;i<total;i++){
+
+let heart=document.createElement("div")
+heart.innerHTML="❤️"
+heart.style.position="absolute"
+heart.style.left=Math.random()*90+"vw"
+heart.style.top=Math.random()*90+"vh"
+heart.style.fontSize="35px"
+
+heart.onclick=function(){
+
+heart.remove()
+tocados++
+
+if(tocados==total){
+document.getElementById("mensaje").style.display="block"
 }
+
+}
+
+document.body.appendChild(heart)
+
+}
+
 </script>
 
 </body>
